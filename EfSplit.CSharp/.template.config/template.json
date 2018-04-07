@@ -1,0 +1,32 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Robin Stemp",
+    "classifications": [ "Database", "Library" ],
+    "identity": "EfSplit.CSharp",
+    "name": "EfSplit lib template",
+    "shortName": "efsplit",
+    "sourceName": "EfSplit",
+    "preferNameDirectory":true,
+    "symbols":{
+        "contextName": {
+            "type": "parameter",
+            "isRequired":true,
+            "description": "Context name for db",
+            "replaces":"CONTEXT_NAME",
+            "FileRename": "CONTEXT_NAME"
+        },
+        "environmentName":{
+            "type": "parameter",
+            "isRequired":false,
+            "description": "Database environment var name for db connection string",
+            "replaces":"ENV_DB_CONNECTIONSTR_NAME"
+        },
+        "scaffoldOptions":{
+            "type": "parameter",
+            "isRequired":false,
+            "description": "Scaffold options, ie tables etc to be appended to db scaffold command line",
+            "replaces":"SCAFFOLD_OPTIONS",
+            "defaultValue": ""
+        }
+    }
+}
