@@ -65,9 +65,10 @@ cd "%thisContextDir%"
 dotnet build
 popd
 
-
-pushd "%thisModelsDir%\Models"
-
+pushd "%thisDir%"
+dotnet new sln --name Db.CONTEXT_NAME.sln
+dotnet sln add Db.Context\Db.CONTEXT_NAME.Context.csproj
+dotnet sln add Db.Models\Db.CONTEXT_NAME.Models.csproj
 popd
 
 
